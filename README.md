@@ -26,7 +26,6 @@ The list entity represents a list of subscribers that can be contacted with the 
 1. Fields
     - id <string>
     - name <string>
-
 2. Dependencies
     - id <string>: A cuid string representing the row in the database
     - check <object>: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
@@ -42,7 +41,6 @@ The broadcast entity represents the broadcast email that can be sent to the list
     - listId <string>
     - template <object>
     - templateData <object>
-
 2. Dependencies
     - id <string>: A cuid string representing the row in the database
     - sesv2 <class>: An AWS Simple Email Service client with working credentials.
@@ -59,7 +57,6 @@ The subscriber entity represents a person who is a member of one or more of the 
     - firstName <string>
     - lastName <string>
     - phone <string>
-
 2. Dependencies
     - id <string>: A cuid string representing the row in the database
     - check <object>: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
