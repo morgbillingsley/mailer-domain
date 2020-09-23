@@ -43,7 +43,7 @@ The broadcast entity represents the broadcast email that can be sent to the list
     - templateData **object**
 2. Dependencies
     - id **string**: A cuid string representing the row in the database
-    - sesv2 <class>: An AWS Simple Email Service client with working credentials.
+    - sesv2 **class**: An AWS Simple Email Service client with working credentials.
     - check **object**: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
 
 
