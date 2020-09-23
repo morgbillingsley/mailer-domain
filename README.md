@@ -7,10 +7,11 @@ This is the main business logic for the Dylate Mailer - a platform that uses the
 To get started using the dylate mailer business logic, simply import the entities.
 
 ```js
+const cuid = require('cuid');
 const { createList } = require('@dylate/mailer-domain');
 const check = require('@dylate/mailer-domain/utilities/check');
 
-const list = createList({ id: 1, check });
+const list = createList({ id: cuid(), check });
 list.name = "Main List";
 
 ```
