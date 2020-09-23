@@ -24,11 +24,11 @@ Here are a list of the entities and their corresponding documentation.
 The list entity represents a list of subscribers that can be contacted with the mailer.
 
 1. Fields
-    - id <string>
-    - name <string>
+    - id **string**
+    - name **string**
 2. Dependencies
-    - id <string>: A cuid string representing the row in the database
-    - check <object>: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
+    - id **string**: A cuid string representing the row in the database
+    - check **object**: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
 
 
 ### Broadcast
@@ -36,15 +36,15 @@ The list entity represents a list of subscribers that can be contacted with the 
 The broadcast entity represents the broadcast email that can be sent to the list of subscribers.
 
 1. Fields
-    - id <string>
-    - name <string>
-    - listId <string>
-    - template <object>
-    - templateData <object>
+    - id **string**
+    - name **string**
+    - listId **string**
+    - template **object**
+    - templateData **object**
 2. Dependencies
-    - id <string>: A cuid string representing the row in the database
+    - id **string**: A cuid string representing the row in the database
     - sesv2 <class>: An AWS Simple Email Service client with working credentials.
-    - check <object>: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
+    - check **object**: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
 
 
 ### Subscriber
@@ -52,11 +52,11 @@ The broadcast entity represents the broadcast email that can be sent to the list
 The subscriber entity represents a person who is a member of one or more of the given lists.
 
 1. Fields
-    - id <string>
-    - email <string>
-    - firstName <string>
-    - lastName <string>
-    - phone <string>
+    - id **string**
+    - email **string**
+    - firstName **string**
+    - lastName **string**
+    - phone **string**
 2. Dependencies
-    - id <string>: A cuid string representing the row in the database
-    - check <object>: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
+    - id **string**: A cuid string representing the row in the database
+    - check **object**: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
