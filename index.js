@@ -1,5 +1,5 @@
 module.exports = {
-    createList: require('./entities/List'),
-    createBroadcast: require('./entities/Broadcast'),
-    createSubscriber: require('./entities/Subscriber')
+    createList: require('./entities/list'),
+    createBroadcast: require('./entities/broadcast'),
+    createSubscriber: require('./entities/subscriber')
 };
