@@ -9,9 +9,8 @@ To get started using the dylate mailer business logic, simply import the entitie
 ```js
 const cuid = require('cuid');
 const { createList } = require('@dylate/mailer-domain');
-const check = require('@dylate/mailer-domain/utilities/check');
 
-const list = createList({ id: cuid(), check });
+const list = createList({ id: cuid() });
 list.name = "Main List";
 
 ```
@@ -28,7 +27,6 @@ The list entity represents a list of subscribers that can be contacted with the 
     - id **string**
     - name **string**
 2. Dependencies
-    - id **string**: A cuid string representing the row in the database
     - check **object**: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
 
 
@@ -43,8 +41,6 @@ The broadcast entity represents the broadcast email that can be sent to the list
     - template **object**
     - templateData **object**
 2. Dependencies
-    - id **string**: A cuid string representing the row in the database
-    - sesv2 **class**: An AWS Simple Email Service client with working credentials.
     - check **object**: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
 
 
@@ -59,5 +55,4 @@ The subscriber entity represents a person who is a member of one or more of the 
     - lastName **string**
     - phone **string**
 2. Dependencies
-    - id **string**: A cuid string representing the row in the database
     - check **object**: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
