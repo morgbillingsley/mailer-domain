@@ -36,6 +36,10 @@ class List {
     public removeSubscriber(subscriber: Subscriber): void {
         this.listRepository.removeSubscriber(this._id, subscriber);
     }
+
+    public countSubscribers(): number {
+        return this.listRepository.countSubscribers(this._id);
+    }
 }
 
 export default List;

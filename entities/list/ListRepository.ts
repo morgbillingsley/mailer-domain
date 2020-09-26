@@ -13,6 +13,7 @@ interface ListRepository {
     countBy(fields: object): number;
     addSubscriber(listId: string, subscriber: Subscriber): void;
     removeSubscriber(listId: string, subscriber: Subscriber): void;
+    countSubscribers(listId: string): number;
 }
 
 export default ListRepository;
