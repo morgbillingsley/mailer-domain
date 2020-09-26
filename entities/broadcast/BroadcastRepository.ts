@@ -8,6 +8,8 @@ interface BroadcastRepository {
     insert(broadcast: Broadcast): void;
     delete(broadcast: Broadcast): void;
     update(broadcast: Broadcast): void;
+    countAll(): number;
+    countBy(fields: object): number;
 }
 
 export default BroadcastRepository;

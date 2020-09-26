@@ -9,6 +9,8 @@ interface SubscriberRepository {
     insert(subscriber: Subscriber): void;
     delete(subscriber: Subscriber): void;
     update(subscriber: Subscriber): void;
+    countAll(): number;
+    countBy(fields: object): number;
 }
 
 export default SubscriberRepository;

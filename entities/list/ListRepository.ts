@@ -9,6 +9,8 @@ interface ListRepository {
     insert(list: List): void;
     delete(list: List): void;
     update(list: List): void;
+    countAll(): number;
+    countBy(fields: object): number;
     addSubscriber(listId: string, subscriber: Subscriber): void;
     removeSubscriber(listId: string, subscriber: Subscriber): void;
 }

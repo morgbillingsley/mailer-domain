@@ -1,6 +1,6 @@
 {
   "name": "@dylate/mailer-domain",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This is the main business logic for the Dylate Mailer - a platform that uses AWS Simple Email Service to send bulk email",
   "main": "index.js",
   "scripts": {
