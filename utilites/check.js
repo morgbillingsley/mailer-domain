@@ -26,5 +26,12 @@ module.exports = Object.freeze({
         } else {
             throw new Error('The data type must be a boolean.');
         }
+    },
+    array: function(data) {
+        if (data instanceof Array) {
+            return data;
+        } else {
+            throw new Error('The data type must be an array.');
+        }
     }
 })
