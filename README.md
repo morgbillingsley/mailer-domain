@@ -6,11 +6,10 @@ This is the main business logic for the Dylate Mailer - a platform that uses the
 
 To get started using the dylate mailer business logic, simply import the entities.
 
-```js
-const cuid = require('cuid');
-const { createList } = require('@dylate/mailer-domain');
+```ts
+import List from '@dylate/mailer-domain/entities/List';
 
-const list = createList({ id: cuid() });
+const list = new List();
 list.name = "Main List";
 
 ```
@@ -26,8 +25,6 @@ The list entity represents a list of subscribers that can be contacted with the 
 1. Fields
     - id **string**
     - name **string**
-2. Dependencies
-    - check **object**: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
 
 
 ### Broadcast
@@ -37,11 +34,9 @@ The broadcast entity represents the broadcast email that can be sent to the list
 1. Fields
     - id **string**
     - name **string**
-    - listId **string**
+    - list **List**
     - template **object**
     - templateData **object**
-2. Dependencies
-    - check **object**: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
 
 
 ### Subscriber
@@ -54,5 +49,3 @@ The subscriber entity represents a person who is a member of one or more of the 
     - firstName **string**
     - lastName **string**
     - phone **string**
-2. Dependencies
-    - check **object**: An object with functions to validate whether or not a variable matches a certain type. *Default object can be found in the `utilites` directory*
