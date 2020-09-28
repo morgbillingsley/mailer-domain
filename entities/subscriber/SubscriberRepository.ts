@@ -1,16 +1,17 @@
 import type Subscriber from "./Subscriber";
 
 interface SubscriberRepository {
-    findOne(id: string): null | Subscriber;
-    findOneBy(fields: object): null | Subscriber;
-    findAll(): Array<Subscriber>;
-    findBy(fields: object): Array<Subscriber>;
-    findByListId(id: string): Array<Subscriber>;
-    insert(subscriber: Subscriber): void;
-    delete(subscriber: Subscriber): void;
-    update(subscriber: Subscriber): void;
-    countAll(): number;
-    countBy(fields: object): number;
+    findOne(id: string): Promise<null> | Promise<Subscriber>;
+    findOneBy(fields: object): Promise<null> | Promise<Subscriber>;
+    findAll(): Promise<Subscriber[]>;
+    findBy(fields: object): Promise<Subscriber[]>;
+    findByListId(id: string): Promise<Subscriber[]>;
+    getPage(limit: number, offset: number): Promise<Subscriber[]>;
+    insert(subscriber: Subscriber): Promise<any>;
+    delete(subscriber: Subscriber): Promise<any>;
+    update(subscriber: Subscriber): Promise<any>;
+    countAll(): Promise<number>;
+    countBy(fields: object): Promise<number>;
 }
 
 export default SubscriberRepository;

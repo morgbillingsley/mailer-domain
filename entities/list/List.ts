@@ -25,7 +25,7 @@ class List {
         this._name = name;
     }
 
-    public get subscribers(): Array<Subscriber> {
+    public get subscribers(): Promise<Subscriber[]> {
         return this.subscriberRepository.findByListId(this._id);
     }
     
@@ -37,7 +37,7 @@ class List {
         this.listRepository.removeSubscriber(this._id, subscriber);
     }
 
-    public countSubscribers(): number {
+    public countSubscribers(): Promise<number> {
         return this.listRepository.countSubscribers(this._id);
     }
 }

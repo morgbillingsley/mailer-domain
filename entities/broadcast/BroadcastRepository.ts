@@ -1,15 +1,16 @@
 import type Broadcast from './Broadcast';
 
 interface BroadcastRepository {
-    findOne(id: string): null | Broadcast;
-    findOneBy(fields: object): null | Broadcast;
-    findAll(): Array<Broadcast>;
-    findBy(fields: object): Array<Broadcast>;
-    insert(broadcast: Broadcast): void;
-    delete(broadcast: Broadcast): void;
-    update(broadcast: Broadcast): void;
-    countAll(): number;
-    countBy(fields: object): number;
+    findOne(id: string): Promise<null> | Promise<Broadcast>;
+    findOneBy(fields: object): Promise<null> | Promise<Broadcast>;
+    findAll(): Promise<Broadcast[]>;
+    findBy(fields: object): Promise<Broadcast[]>;
+    getPage(limit: number, offset: number): Promise<Broadcast[]>;
+    insert(broadcast: Broadcast): Promise<any>;
+    delete(broadcast: Broadcast): Promise<any>;
+    update(broadcast: Broadcast): Promise<any>;
+    countAll(): Promise<number>;
+    countBy(fields: object): Promise<number>;
 }
 
 export default BroadcastRepository;
